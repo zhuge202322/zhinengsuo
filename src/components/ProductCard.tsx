@@ -24,10 +24,12 @@ export function ProductCard({ product }: ProductCardProps) {
     <div className="group relative border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow">
       <div className="aspect-square relative bg-gray-100">
         {imageSrc ? (
-           <img 
+           <Image 
              src={imageSrc} 
              alt={imageAlt}
-             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+             fill
+             className="object-cover group-hover:scale-105 transition-transform duration-300"
+             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 20vw"
            />
         ) : (
           <div className="flex items-center justify-center h-full text-gray-400">No Image</div>

@@ -124,10 +124,12 @@ export function ProductShowcase3D({ products = [] }: ProductShowcase3DProps) {
               }}
             >
               <div className="relative h-[500px] md:h-[650px] w-full overflow-visible">
-                 <img 
+                 <Image 
                    src={imageSrc} 
                    alt={product.name}
-                   className="w-full h-full object-contain drop-shadow-2xl"
+                   fill
+                   className="object-contain drop-shadow-2xl"
+                   sizes="(max-width: 768px) 100vw, 50vw"
                  />
               </div>
               
